@@ -1,0 +1,6 @@
+GIT_PATH=C:\Tools\LDT\libs\git\2.24.0\bin
+GRADLE_ENABLED=false
+JAVA_PATH=C:\Tools\LDT\libs\java\jdk1.8.0_201\bin
+JAVA_HOME=C:\Tools\LDT\libs\java\jdk1.8.0_201
+MAVEN_PATH=C:\Tools\LDT\libs\maven\3.6.0\bin
+NODE_ENABLED=false

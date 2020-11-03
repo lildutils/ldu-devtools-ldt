@@ -1,0 +1,17 @@
+[user]
+	name = 
+	email = 
+[diff]
+    tool = kdiff3
+[difftool]
+    prompt = false
+[difftool "kdiff3"]
+    cmd = '~/kdiff3.exe' \"$LOCAL\" \"$REMOTE\"
+    trustExitCode = false
+[merge]
+    tool = kdiff3
+[mergetool]
+    keepBackup = false
+[mergetool "kdiff3"]
+    cmd = '~/kdiff3.exe' \"$BASE\" \"$LOCAL\" \"$REMOTE\" -o \"$MERGED\"
+    trustExitCode = false

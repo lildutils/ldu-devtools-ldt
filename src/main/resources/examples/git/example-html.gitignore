@@ -1,0 +1,14 @@
+/.vscode/
+
+/_build/
+/_dist/
+
+/bower_components/
+/node_modules/
+/lib/
+
+/gulpfile-configs.json
+/npm-debug.log
+/package-lock.json
+
+.ldt*

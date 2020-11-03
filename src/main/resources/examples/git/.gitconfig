@@ -1,0 +1,20 @@
+[diff]
+    tool = kdiff3
+[difftool]
+    prompt = false
+[difftool "kdiff3"]
+    cmd = 'C:/Tools/KDiff3/app/kdiff3.exe' \"$LOCAL\" \"$REMOTE\"
+    trustExitCode = false
+[difftool "sourcetree"]
+	cmd = '' \"$LOCAL\" \"$REMOTE\"
+    trustExitCode = false
+[merge]
+    tool = kdiff3
+[mergetool]
+    keepBackup = false
+[mergetool "kdiff3"]
+    cmd = 'C:/Tools/KDiff3/app/kdiff3.exe' \"$BASE\" \"$LOCAL\" \"$REMOTE\" -o \"$MERGED\"
+    trustExitCode = false
+[mergetool "sourcetree"]
+	cmd = "'' "
+	trustExitCode = true

@@ -1,0 +1,5 @@
+GIT_PATH={DRIVE_LETTER}:\Tools\LDT\libs\git\2.24.0\bin
+GRADLE_ENABLED=false
+JAVA_ENABLED=false
+MAVEN_ENABLED=false
+NODE_PATH={DRIVE_LETTER}:\Tools\LDT\libs\nodejs\12.13.1

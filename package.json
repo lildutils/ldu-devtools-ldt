@@ -1,0 +1,28 @@
+{
+    "name": "@ldu-devtools/ldt",
+    "description": "Simulate a virtual environment to developers can use multiple dependencies with multiple versions at the same OS in the same project",
+    "version": "2.0.0-SNAPSHOT",
+    "author": {
+        "name": "LilDworks",
+        "email": "info@lildworks.hu"
+    },
+    "license": "MIT",
+    "repository": {
+        "url": "https://github.com/lildutils/ldu-devtools-ldt.git"
+    },
+    "peerDependencies": {},
+    "dependencies": {},
+    "devDependencies": {
+        "@ldu-devtools/gulputils": "2.1.0",
+        "dateformat": "3.0.3",
+        "deepmerge": "4.2.2",
+        "del": "5.1.0",
+        "gulp": "4.0.2",
+        "gulp-concat": "2.6.1",
+        "gulp-insert": "0.5.0",
+        "hash-generator": "0.1.0",
+        "merge-stream": "2.0.0",
+        "minimist": "1.2.5",
+        "username": "5.1.0"
+    }
+}
