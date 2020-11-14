@@ -74,21 +74,29 @@ Restore the given database to the given dump file
 
 ## setup crontab for automated backups
 
-First edit crontab ...
+First install postfix to send error emails
+
+``` sh
+sudo apt-get install postfix
+```
+
+Edit crontab
 
 ``` sh
 crontab -e
 ```
 
-... set the backup frequency
+Set the backup frequency
+
+### run db backup in every day at every 10. minute
 
 ``` sh
-# run db backup in every day at every 10. minute
 echo '*/10 * * * * ~/devops/database/DEV-INF/backup_cron.sh>>~/devops/.logs/backup_cron_sh.log'
 ```
 
+### run db backup in every monday at midnight
+
 ``` sh
-# run db backup in every monday at midnight
 echo '0 0 * * mon ~/devops/database/DEV-INF/backup_cron.sh>>~/devops/.logs/backup_cron_sh.log'
 ```
 
