@@ -38,6 +38,12 @@ wget https://github.com/lildutils/ldu-devtools-devinf.git#1.5.1
 
 6) Set the configurations in /DEV-INF/configs.json file
 
+7) Create the dumps log file
+
+``` sh
+echo "## created at: $($now)">>~/devops/.logs/backup_cron.sh
+```
+
 ### run
 
 Setup the MySQL Server Docker Container with docker-compose by docker-compose.yml file
@@ -80,23 +86,27 @@ First install postfix to send error emails
 sudo apt-get install postfix
 ```
 
+NOTES:
+
+1) only local will save the email content in /var/mail/$user file
+
+2) TODO internet config --> with SMTP
+
 Edit crontab
 
 ``` sh
 crontab -e
 ```
 
-Set the backup frequency
-
-### run db backup in every day at every 10. minute
+## setup the backup frequency
 
 ``` sh
+# run db backup in every day at every 10. minute
 echo '*/10 * * * * ~/devops/database/DEV-INF/backup_cron.sh>>~/devops/.logs/backup_cron_sh.log'
 ```
 
-### run db backup in every monday at midnight
-
 ``` sh
+# run db backup in every monday at midnight
 echo '0 0 * * mon ~/devops/database/DEV-INF/backup_cron.sh>>~/devops/.logs/backup_cron_sh.log'
 ```
 
