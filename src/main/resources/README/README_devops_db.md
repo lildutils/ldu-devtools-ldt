@@ -74,17 +74,22 @@ Restore the given database to the given dump file
 
 ## setup crontab for automated backups
 
-First edit crontab as root user ...
+First edit crontab ...
 
 ``` sh
-sudo crontab -e
+crontab -e
 ```
 
 ... set the backup frequency
 
 ``` sh
+# run db backup in every day at every 10. minute
+echo '*/10 * * * * ~/devops/database/DEV-INF/backup_cron.sh>>~/devops/.logs/backup_cron_sh.log'
+```
+
+``` sh
 # run db backup in every monday at midnight
-echo '0 0 * * mon "~/devops/db/DEV-INF/backup_cron.sh">>"~/devops/.logs/crontab_db_backups.log"'
+echo '0 0 * * mon ~/devops/database/DEV-INF/backup_cron.sh>>~/devops/.logs/backup_cron_sh.log'
 ```
 
 ## read crontab system logs
@@ -96,7 +101,7 @@ sudo grep CRON /var/log/syslog
 ## read crontab DEV-INF/db logs
 
 ``` sh
-cat ~/devops/.logs/crontab_db_backups.log
+tail -f -n 50 ~/devops/.logs/backup_cron_sh.log
 ```
 
 ## 
